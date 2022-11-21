@@ -1,0 +1,53 @@
+.header {
+    display: flex;
+    width: 100%;
+    height: calc(100 / 1440 * 100vw);
+    background: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 3%;
+    font-family: 'Andika';
+    color: #97404C;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.header__logo img{
+    width: calc(50 / 1440 * 100vw);
+    height: calc(50 / 1440 * 100vw);
+    margin-left: 70%;
+    margin-top: 15%;
+}
+
+.header__title {
+    font-family: 'Andika';
+    margin-left: 3%;
+    margin-top: -0.10%;
+}
+
+h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: calc(34 / 1440 * 100vw);
+    line-height: calc(44 / 1440 * 100vw);
+}
+
+.header__links {
+    display: inline-flex;
+    align-self: center;
+    margin-left: 55%;
+    font-size: calc(18 / 1440 * 100vw);
+    line-height: calc(23 / 1440 * 100vw);
+}
+
+a {
+    text-decoration: none;    
+    color: #97404C;
+}
+
+.header__links-registration {
+    margin-left: 10%;
+}
+  
+.header__links-basket {
+    margin-left: 10%;
+}
