@@ -1,16 +1,13 @@
 {
   "files": {
-    "main.css": "/4p22-final-project-larionova-natalya/static/css/main.073c9b0a.css",
-    "main.js": "/4p22-final-project-larionova-natalya/static/js/main.d37a8960.js",
-    "static/js/787.db2084d5.chunk.js": "/4p22-final-project-larionova-natalya/static/js/787.db2084d5.chunk.js",
-    "static/media/logo.svg": "/4p22-final-project-larionova-natalya/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.css": "/4p22-final-project-larionova-natalya/static/css/main.f9c9405c.css",
+    "main.js": "/4p22-final-project-larionova-natalya/static/js/main.0e89a4dc.js",
     "index.html": "/4p22-final-project-larionova-natalya/index.html",
-    "main.073c9b0a.css.map": "/4p22-final-project-larionova-natalya/static/css/main.073c9b0a.css.map",
-    "main.d37a8960.js.map": "/4p22-final-project-larionova-natalya/static/js/main.d37a8960.js.map",
-    "787.db2084d5.chunk.js.map": "/4p22-final-project-larionova-natalya/static/js/787.db2084d5.chunk.js.map"
+    "main.f9c9405c.css.map": "/4p22-final-project-larionova-natalya/static/css/main.f9c9405c.css.map",
+    "main.0e89a4dc.js.map": "/4p22-final-project-larionova-natalya/static/js/main.0e89a4dc.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.d37a8960.js"
+    "static/css/main.f9c9405c.css",
+    "static/js/main.0e89a4dc.js"
   ]
 }
