@@ -2,6 +2,7 @@ import './App.css';
 import Card from './components/card/Card';
 import { useEffect, useState} from 'react';
 import Header from './components/header/header';
+import Filter from './components/filter/filter';
 import Footer from './components/Footer/Footer';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
   return (
     <div className="App">
       <Header/>
+      <Filter/>
       <div className='App-container'>
         {
           products.map((item) => {
