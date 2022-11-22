@@ -6,13 +6,13 @@ function Header () {
              <div className='header__logo'>
                  <img src="https://img.icons8.com/ios-filled/50/null/controller.png" alt="logo" />
              </div>
-             <div class="header__title">
+             <div className="header__title">
                  <h1>Game-shop</h1>
              </div>
-             <div class="header__links">
-                 <a href=".#" class="header__links-entry">Вход</a>
-                 <a href=".#" class="header__links-registration">Регистрация</a>
-                 <a href=".#" class="header__links-basket">Корзина</a>
+             <div className="header__links">
+                 <a href=".#" className="header__links-entry">Вход</a>
+                 <a href=".#" className="header__links-registration">Регистрация</a>
+                 <a href=".#" className="header__links-basket">Корзина</a>
              </div>
         </div>
     )

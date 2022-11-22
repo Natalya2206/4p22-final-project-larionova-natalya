@@ -1,15 +1,12 @@
-.Filter {
+.Research {
     display: flex;
-    margin-bottom: 1%;
-    margin-left: 70%;
-    margin-top: 1%;
 }
 
-.Filter-label {
+.Research-label {
     display: none;
 }
 
-.Filter-input {
+.Research-input {
     padding: 5px 10px;
     outline: none;
     width: calc(300 / 1440 * 100vw);

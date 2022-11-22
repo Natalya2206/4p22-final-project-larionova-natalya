@@ -4,5 +4,22 @@
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
-  margin-left: 3%;
+  margin: auto;
+}
+
+.filter {
+  margin-left: 58%;
+  display: flex;
+  margin-bottom: 3%;
+}
+
+.react-select-container {
+  width: calc(200 / 1440 * 100vw);
+  height: calc(30 / 1440 * 100vw);
+  margin-left: 5%;
+}
+
+.react-select__control, .react-select__menu-list {
+  color:#6b0404;
+  font-family: 'Andika';
 }
