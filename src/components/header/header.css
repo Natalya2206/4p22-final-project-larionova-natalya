@@ -34,7 +34,7 @@ h1 {
 .header__links {
     display: inline-flex;
     align-self: center;
-    margin-left: 55%;
+    margin-left: 50%;
     font-size: calc(18 / 1440 * 100vw);
     line-height: calc(23 / 1440 * 100vw);
 }
@@ -42,6 +42,10 @@ h1 {
 a {
     text-decoration: none;    
     color: #97404C;
+}
+
+.header__links-entry {
+    margin-left: 10%;
 }
 
 .header__links-registration {

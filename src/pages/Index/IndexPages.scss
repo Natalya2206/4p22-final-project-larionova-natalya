@@ -1,0 +1,27 @@
+.Index-container {
+    display: flex;
+    padding: 20px 20px;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin: auto;
+}
+  
+.filter {
+    width: calc(700 / 1440 * 100vw);
+    height: calc(30 / 1440 * 100vw);
+    margin-left: 50%;
+    display: flex;
+    margin-bottom: 3%;
+}
+  
+.react-select-container > div {
+    box-shadow: 0px 0px 4px 0px rgb(0 0 0 / 65%);
+    width: calc(250 / 1440 * 100vw);
+    margin-left: 5%;
+}
+  
+.react-select__placeholder, .react-select__menu-list {
+    color:#6b0404;
+    font-family: 'Andika';
+}
