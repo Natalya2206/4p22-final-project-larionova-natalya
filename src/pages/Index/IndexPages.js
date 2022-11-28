@@ -21,7 +21,7 @@ function IndexPage() {
         getAllProducts()
       }
     }
-  
+
     function getAllProducts(){
       fetch('https://6378cea27eb4705cf274e216.mockapi.io/games')
        .then((responce) => responce.json())
@@ -54,7 +54,7 @@ function IndexPage() {
          searchField={handleSearchInput}/>
          <Select
            isClearable
-           isSearchable 
+           isSearchable
            options={categories}
            className="react-select-container"
            classNamePrefix="react-select"
@@ -66,7 +66,7 @@ function IndexPage() {
         <div className='Index-container'>
           {
             products.filter((products) => {
-              if (activeCategory.label === undefined) {
+              if (activeCategory===null || activeCategory.label === undefined) {
                 return true
               } else {
                 return products.category === activeCategory.label

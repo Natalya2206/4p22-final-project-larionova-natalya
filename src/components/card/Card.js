@@ -1,9 +1,10 @@
-import './Card.css';
+import './Card.scss';
+import { Link } from 'react-router-dom';
 
 function Card (props) {
     return (
          <div className='Card'>
-            <a href=".#"><img className='Card-img' src={ props.img } alt="products" /></a>
+            <Link to=''><img className='Card-img' src={ props.img } alt="products" /></Link>
              <div className='Card-container'>
                 <a href=".#"><h2 className='Card-title'> { props.title } </h2></a>
                  <div className='Card-info'>

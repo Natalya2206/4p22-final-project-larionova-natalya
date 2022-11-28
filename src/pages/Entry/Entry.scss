@@ -1,0 +1,160 @@
+.entry {
+    height: calc(700 / 1440 * 100vw);
+}
+
+.form {
+    position: relative;
+    width: calc(500 / 1440 * 100vw);
+    height: calc(500 / 1440 * 100vw);
+    background: #FFFFFF;
+    box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.25);
+    margin-top: 10%;
+    left: 35%;
+    padding: 3px 3px 3px 3px;
+    border-radius: 10px;
+}
+
+.form__header {
+    margin-left: 37%;
+    margin-top: 15%;
+    width: calc(115 / 1440 * 100vw);
+    height: calc(60 / 1440 * 100vw);
+}
+    
+h2 {
+    font-family: 'Andika';
+    font-style: normal;
+    font-weight: 700;
+    font-size: calc(50 / 1440 * 100vw);
+    line-height: calc(50 / 1440 * 100vw);
+    color: #6b0404;;
+    margin-top: 20%;
+}
+
+.form-input__info-email, .form-input__info-password {
+    height: calc(16 / 1440 * 100vw);
+    width: calc(40 / 1440 * 100vw);
+    font-family: 'Andika';
+    font-style: normal;
+    font-weight: 700;
+    font-size: calc(16 / 1440 * 100vw);
+    line-height: calc(16 / 1440 * 100vw);
+    color: #6b0404;
+    margin-left: 1%;
+    margin-bottom: 1%;
+}
+
+.form-input__info {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3%;
+    margin-left: 7%;
+    margin-top: 2%;
+}
+     
+.input {
+    width: calc(430 / 1440 * 100vw);
+    height: calc(49 / 1440 * 100vw);
+    background: #FFFFFF;
+    border: 2px solid #787878;
+    font-family: 'Andika';
+    font-style: normal;
+    font-weight: 700;
+    font-size: calc(28 / 1440 * 100vw);
+    line-height: calc(36 / 1440 * 100vw);
+    color:#6b0404;
+    padding: 10px;
+}
+    
+input::placeholder {
+    font-family: 'Andika';
+    color: #CCCCCC;
+    padding: 5px;
+}
+
+.form-checkbox {
+	width: calc(300 / 1440 * 100vw);
+	margin-left: 7%;
+}
+
+.checkbox-span {
+    width: calc(300 / 1440 * 100vw);
+    font-size: calc(16 / 1440 * 100vw);
+    font-family: 'Andika';
+    color:#6b0404;
+}
+
+.checkbox-other {
+	display: block;
+	margin: 0 0 10px 0;
+	cursor: pointer;
+	user-select: none;
+	position: relative;
+}
+.checkbox-other input[type=checkbox] {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	display: block;
+	width: 0;
+	height: 0;
+}
+.checkbox-other span {
+	display: inline-block;
+	position: relative; 
+	padding: 0 0 0 35px; 
+	line-height: 22px;    
+}
+.checkbox-other span:before {
+	content: "";
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	transition: background 0.3s ease;
+	background: url(https://snipp.ru/uploads/contents/checkbox-1.png) 0 0 no-repeat;
+}
+
+.checkbox-other input[type=checkbox]:checked + span:before {
+	background-image: url(https://snipp.ru/uploads/contents/checkbox-2.png);
+}
+
+.focused span:before {
+	box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+.checkbox-other span:hover:before {
+	filter: brightness(110%);
+}
+
+.checkbox-other span:active:before {
+	filter: brightness(80%);
+}
+
+.checkbox-other input[type=checkbox]:disabled + span {
+	color: #666;
+	cursor: default;
+}
+.checkbox-other input[type=checkbox]:disabled + span:before {
+	filter: grayscale(100%);
+	opacity: 0.6;
+}
+    
+.form__button {
+    width: calc(180 / 1440 * 100vw);
+    height: calc(52 / 1440 * 100vw);
+    position: absolute;
+    top: 80%;
+    left: 32%;
+    border: 0;
+    align-items: center;
+    color: #FFFFFF;
+    background: #034b15;
+    font-family: 'Andika';
+    font-style: normal;
+    font-weight: 700;
+    font-size: calc(24 / 1440 * 100vw);
+    line-height: calc(16 / 1440 * 100vw);    
+}

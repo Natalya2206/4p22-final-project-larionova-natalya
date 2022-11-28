@@ -12,8 +12,8 @@ function Header () {
              </div>
              <div className="header__links">
                  <Link to={''} className="header__links-catalog">Каталог</Link>
-                 <Link to={''} className="header__links-entry">Вход</Link>
-                 <Link to={''} className="header__links-registration">Регистрация</Link>
+                 <Link to='/entry' className="header__links-entry">Вход</Link>
+                 <Link to={'/registration'} className="header__links-registration">Регистрация</Link>
                  <Link to={''} className="header__links-basket">Корзина</Link>
              </div>
         </div>
