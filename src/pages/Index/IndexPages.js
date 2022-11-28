@@ -71,12 +71,14 @@ function IndexPage() {
               } else {
                 return products.category === activeCategory.label
               }
-            }).map((item) => {
-              return <Card key={item.id}
-                           title={item.title} 
-                           img={item.image}
-                           category={item.category} 
-                           price={item.price} />
+          }).map((item, index) => {
+            return <Card
+                    key={index}
+                    id={item.id}
+                    title={item.title} 
+                    img={item.image}
+                    category={item.category} 
+                    price={item.price} />
             })
           }
         </div>

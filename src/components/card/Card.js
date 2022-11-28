@@ -1,15 +1,15 @@
 import './Card.scss';
 import { Link } from 'react-router-dom';
 
-function Card (props) {
+function Card ({ id, img, title, category, price}) {
     return (
          <div className='Card'>
-            <Link to=''><img className='Card-img' src={ props.img } alt="products" /></Link>
+            <Link to={`products/${id}`}><img className='Card-img' src={ img } alt="products" /></Link>
              <div className='Card-container'>
-                <a href=".#"><h2 className='Card-title'> { props.title } </h2></a>
+                <Link to={`products/${id}`}><h2 className='Card-title'> { title } </h2></Link>
                  <div className='Card-info'>
-                     <div className='Card-category'> { props.category } </div>
-                     <div className='Card-price common-price'>{ props.price }</div>
+                     <div className='Card-category'> { category } </div>
+                     <div className='Card-price common-price'>{ price }</div>
                  </div>
              </div>
          </div>
