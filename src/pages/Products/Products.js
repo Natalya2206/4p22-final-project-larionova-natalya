@@ -1,10 +1,30 @@
 import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
+import { addtoBasket, removeFromBasket } from '../../store/basketSlice';
+import { Link } from 'react-router-dom';
 import './Products.scss';
 
 function ProductPage () {
     const { userId } = useParams();
     const [products, setProducts] = useState({});
+    const dispatch = useDispatch();
+    const goods = useSelector((state) => state.basket)
+
+
+    const onByClick = (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+
+        dispatch(addtoBasket(products.id));
+    }
+
+    const onDeleteClick = (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+
+        dispatch(removeFromBasket(products.id));
+    }
 
     useEffect(() => {
         (async () => {
@@ -26,7 +46,15 @@ function ProductPage () {
                 <div className='Products-description'> {products.description} </div>
                 <div className='Products-cost'>
                      <div className='Products-price common-price'> {products.price} </div>
-                     <button className='Products-button'>Купить</button>
+                     { !goods[products.id] && <button onClick={ onByClick } className='Products-button'>Купить</button>}
+                     { goods[products.id] && (
+                        <div className='Button-counter'>
+                             <button className='Button-minus' onClick={ onDeleteClick }>-</button>
+                                 <div className='Button-quantity'> { goods[products.id] } </div>
+                             <button className='Button-plus' onClick={ onByClick }>+</button>
+                             <Link to={'/entry'}><button className='Button-basket'>В корзину</button></Link>
+                        </div>
+                     )}
                 </div>
              </div>
         </div>

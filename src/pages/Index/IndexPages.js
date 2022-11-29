@@ -3,10 +3,13 @@ import { useEffect, useState} from 'react';
 import Card from '../../components/card/Card';
 import Research from '../../components/research/research';
 import Select from 'react-select';
+import { useDispatch, useSelector } from 'react-redux';
+import { setProducts } from '../../store/productsSlice';
 
 
 function IndexPage() {
-    const [products, setProducts] = useState([]);
+    const products = useSelector((state) => state.products);
+    const dispatch = useDispatch();
     const [categories, setCategories] = useState([]);
     const [activeCategory, setactiveCategory] = useState({});
     const [titles, setTitles] = useState('');
@@ -14,7 +17,7 @@ function IndexPage() {
     const handleSearchInput = (name) => {
       setTitles(name)
       if (name.length >= 1) {
-        setProducts(products.filter(product => {
+          setProducts(products.filter(product => {
           return product.title.toLowerCase().indexOf(name) >= 0
         }))
       } else {
@@ -26,7 +29,7 @@ function IndexPage() {
       fetch('https://6378cea27eb4705cf274e216.mockapi.io/games')
        .then((responce) => responce.json())
        .then((result) =>{
-        setProducts(result);
+        dispatch(setProducts(result));
         let uniqCategory = new Set();
         let сategories = []
         result.forEach(product => {

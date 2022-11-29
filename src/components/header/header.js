@@ -1,4 +1,4 @@
-import './header.css';
+import './Header.css';
 import { Link } from 'react-router-dom';
 
 function Header () {
@@ -14,7 +14,7 @@ function Header () {
                  <Link to={'/'} className="header__links-catalog">Каталог</Link>
                  <Link to='/entry' className="header__links-entry">Вход</Link>
                  <Link to={'/registration'} className="header__links-registration">Регистрация</Link>
-                 <Link to={''} className="header__links-basket">Корзина</Link>
+                 <Link to={'/basket'} className="header__links-basket">Корзина</Link>
              </div>
         </div>
     )

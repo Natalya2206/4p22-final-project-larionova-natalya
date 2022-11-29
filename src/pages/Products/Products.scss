@@ -42,7 +42,7 @@ h6 {
 .Products-info {
     width: calc(650 / 1440 * 100vw);
     height: calc(480 / 1440 * 100vw);
-    background: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255, 0.10);
     box-shadow: 0px 0px 4px 0px rgb(0 0 0 / 65%);
     text-align: left;
     border-radius: 3px;
@@ -59,7 +59,7 @@ h6 {
 }
 
 .Products-cost{
-    margin: 7% 0 3% 8%;
+    margin: 7% 0 3% 30%;
     display: inline-flex;
     width: calc(650 / 1440 * 100vw);;
 }
@@ -83,5 +83,51 @@ h6 {
     font-style: normal;
     font-weight: 700;
     font-size: calc(20 / 1440 * 100vw);
-    line-height: calc(16 / 1440 * 100vw)
+    line-height: calc(16 / 1440 * 100vw);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.Button-counter {
+    width: calc(250 / 1440 * 100vw);
+    height: calc(40 / 1440 * 100vw);
+    background: #FFFFFF;
+    display: inline-flex;
+    margin-left: 15%;
+}
+
+.Button-minus, .Button-plus {
+    width: calc(30 / 1440 * 100vw);
+    height: calc(30 / 1440 * 100vw);
+    background: #000000;
+    border-radius: 3px;
+    color: #FFFFFF;
+    font-size: calc(18 / 1440 * 100vw);
+    border: 0;
+}
+
+.Button-quantity {
+    color:#6b0404;
+    font-size: calc(18 / 1440 * 100vw);
+    margin-top: 1%;
+    font-weight: bold;
+    margin-right: 5%;
+    margin-left: 5%;   
+}
+
+.Button-basket {
+    width: calc(150 / 1440 * 100vw);
+    height: calc(30 / 1440 * 100vw);
+    border: 0;
+    margin-left: 3%;
+    align-items: center;
+    color: #FFFFFF;
+    background: #135c10;
+    font-family: 'Andika';
+    font-style: normal;
+    font-weight: 700;
+    font-size: calc(16 / 1440 * 100vw);
+    line-height: calc(16 / 1440 * 100vw);
+    cursor: pointer;
+    border-radius: 3px;
 }
