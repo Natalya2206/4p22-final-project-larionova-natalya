@@ -59,14 +59,15 @@ h6 {
 }
 
 .Products-cost{
-    margin: 7% 0 3% 30%;
+    margin: 7% 0 3% 20%;
     display: inline-flex;
-    width: calc(650 / 1440 * 100vw);;
+    width: calc(400 / 1440 * 100vw);;
 }
 
 .Products-price{
     color:#6b0404;
     font-size: calc(24 / 1440 * 100vw);
+    width: calc(100 / 1440 * 100vw);
     font-weight: bold;
 }
 
@@ -91,9 +92,9 @@ h6 {
 .Button-counter {
     width: calc(250 / 1440 * 100vw);
     height: calc(40 / 1440 * 100vw);
-    background: #FFFFFF;
+    background: rgb(255, 255, 255, 0.10);
     display: inline-flex;
-    margin-left: 15%;
+    margin-left: 10%;
 }
 
 .Button-minus, .Button-plus {
