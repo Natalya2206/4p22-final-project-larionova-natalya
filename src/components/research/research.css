@@ -25,4 +25,13 @@
 
 input::placeholder {
     color: #CCCCCC;
-} 
+}
+
+@media screen and (max-width: 768px) {
+    .Research-input {
+        width: calc(250 / 768 * 100vw);
+        height: calc(30 / 768 * 100vw);
+        font-size: calc(16 / 768 * 100vw);
+        line-height: calc(20 / 768 * 100vw);
+    }
+}

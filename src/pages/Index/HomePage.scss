@@ -26,3 +26,18 @@
     color:#6b0404;
     font-family: 'Andika';
 }
+
+@media screen and (max-width: 768px) {
+    .filter {
+        width: calc(450 / 768 * 100vw);
+        height: calc(30 / 768 * 100vw);
+        margin-left: 28%;
+        display: flex;
+        margin-bottom: 3%;
+    }
+
+    .react-select-container > div {
+        width: calc(270 / 768 * 100vw);
+        margin-top: -1.5%;
+    }
+}

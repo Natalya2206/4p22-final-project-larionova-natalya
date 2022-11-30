@@ -1,4 +1,4 @@
-import './IndexPages.scss';
+import './HomePage.scss';
 import { useEffect, useState} from 'react';
 import Card from '../../components/card/Card';
 import Research from '../../components/research/research';

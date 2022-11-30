@@ -55,3 +55,27 @@ a {
 .header__links-basket {
     margin-left: 10%;
 }
+
+@media screen and (max-width: 768px) {
+    .header {
+        height: calc(70 / 768 * 100vw);
+    }
+
+    .header__logo img{
+        width: calc(30 / 768 * 100vw);
+        height: calc(30 / 768 * 100vw);
+        margin-top: 45%;
+    }
+
+    .header__title {
+        font-family: 'Andika';
+        margin-left: 4%;
+        margin-top: 1.5%;
+    }
+
+    .header__links {
+        font-size: calc(16 / 768 * 100vw);
+        line-height: calc(23 / 768 * 100vw);
+        margin-left: 30%;
+    }
+}
