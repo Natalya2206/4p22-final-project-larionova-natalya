@@ -52,7 +52,7 @@ function ProductPage () {
                              <button className='Button-minus' onClick={ onDeleteClick }>-</button>
                                  <div className='Button-quantity'> { goods[products.id] } </div>
                              <button className='Button-plus' onClick={ onByClick }>+</button>
-                             <Link to={'/entry'}><button className='Button-basket'>В корзину</button></Link>
+                             <Link to={'/basket'}><button className='Button-basket'>В корзину</button></Link>
                         </div>
                      )}
                 </div>

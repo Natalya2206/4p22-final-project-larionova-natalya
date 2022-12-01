@@ -3,8 +3,8 @@
 }
 
 .Card {
-    width: 267px;
-    height: 467px;
+    width: calc(240 / 1440 * 100vw);
+    height: calc(450 / 1440 * 100vw);
     background: rgb(255, 255, 255);
     box-shadow: 0px 0px 4px 0px rgb(0 0 0 / 65%);
     text-align: center;
@@ -16,20 +16,22 @@
 .Card-img {
     display: block;
     width: 100%;
-    height: 375px;
+    height: calc(320 / 1440 * 100vw);
 }
 
 .Card-title {
     color: #2e2e2e;
     font-weight: 600;
-    margin: 5px 0 0 0;
+    margin: 5% 0 5% 0;
     display: block;
-    font-size: 18px;
+    font-size: calc(18 / 1440 * 100vw);
+    line-height: calc(20 / 1440 * 100vw);
     font-family: 'Andika';
 }
 
 .Card-info {
-    font-size: 16px;
+    font-size: calc(16 / 1440 * 100vw);
+    line-height: calc(20 / 1440 * 100vw);
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -44,8 +46,117 @@
     color:rgb(23, 1, 44);
 }
 
+.Card-cost {
+    margin: 7% 0 3% 20%;
+    display: inline-flex;
+    width: calc(250 / 1440 * 100vw);
+}
+
+.Card-button {
+    margin-left: 8%;
+    width: calc(100 / 1440 * 100vw);
+    height: calc(30 / 1440 * 100vw);
+    border: 0;
+    align-items: center;
+    color: #FFFFFF;
+    background: #6b0404;
+    font-family: 'Andika';
+    font-style: normal;
+    font-weight: 700;
+    font-size: calc(14 / 1440 * 100vw);
+    line-height: calc(16 / 1440 * 100vw);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.Button-Counter {
+    width: calc(250 / 1440 * 100vw);
+    height: calc(30 / 1440 * 100vw);
+    margin-left: -25%;
+}
+
+.Button-Minus, .Button-Plus {
+    width: calc(30 / 1440 * 100vw);
+    height: calc(30 / 1440 * 100vw);
+    background: #000000;
+    border-radius: 3px;
+    color: #FFFFFF;
+    font-size: calc(18 / 1440 * 100vw);
+    border: 0;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.Button-Basket {
+    width: calc(100 / 1440 * 100vw);
+    height: calc(30 / 1440 * 100vw);
+    border: 0;
+    margin-left: 3%;
+    align-items: center;
+    color: #FFFFFF;
+    background: #135c10;
+    font-family: 'Andika';
+    font-style: normal;
+    font-weight: 700;
+    font-size: calc(14 / 1440 * 100vw);
+    line-height: calc(16 / 1440 * 100vw);
+    cursor: pointer;
+    border-radius: 3px;
+}
+
 @media screen and (max-width: 768px) {
+    .Card {
+        width: calc(240 / 768 * 100vw);
+        height: calc(450 / 768 * 100vw);
+        background: rgb(255, 255, 255);
+    }
+
+    .Card-img {
+        height: calc(320 / 768 * 100vw);
+    }
+
     .Card-title {
         margin: 7% 0 6% 0;
+    }
+
+    .Card-title {
+        font-size: calc(18 / 768 * 100vw);
+        line-height: calc(20 / 768 * 100vw);
+    }
+    
+    .Card-info {
+        font-size: calc(16 / 768 * 100vw);
+        line-height: calc(20 / 768 * 100vw);
+    }
+
+    .Card-cost {
+        margin: 1% 0 3% 10%;
+        display: inline-flex;
+        width: calc(240 / 768 * 100vw);
+    }
+
+    .Card-button {
+        width: calc(150 / 768 * 100vw);
+        height: calc(40 / 768 * 100vw);
+        font-size: calc(18 / 768 * 100vw);
+        line-height: calc(16 / 768 * 100vw);
+    }
+
+    .Button-Counter {
+        width: calc(300 / 768 * 100vw);
+        height: calc(30 / 768 * 100vw);
+    }
+
+    .Button-Minus, .Button-Plus {
+        width: calc(30 / 768 * 100vw);
+        height: calc(30 / 768 * 100vw);
+        font-size: calc(18 / 768 * 100vw);
+    }
+
+    .Button-Basket {
+        width: calc(110 / 768 * 100vw);
+        height: calc(40 / 768 * 100vw);
+        font-size: calc(16 / 768 * 100vw);
+        line-height: calc(16 / 768 * 100vw);
     }
 }

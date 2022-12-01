@@ -27,7 +27,7 @@ function Registration ()  {
                      </div>
                      <div className="Registration__input-radio-no">
                          <input id="radio_no" type="radio" name="choise" value="no"/>
-                         <label class="Registration__input-radio-label" htmlFor="radio_no">Нет</label>
+                         <label className="Registration__input-radio-label" htmlFor="radio_no">Нет</label>
                      </div>
              </div>
              <button className="Registration__button">Регистрация</button>

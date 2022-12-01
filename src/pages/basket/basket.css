@@ -1,0 +1,52 @@
+.Basket-sum {
+    display: flex;
+    color:#6b0404;
+    font-size: calc(24 / 1440 * 100vw);
+    font-weight: bold;
+    margin-left: 80%;
+}
+
+p {
+    margin-top: -0.1%;
+    margin-right: 5%;
+}
+
+.Basket-clear {
+    margin-left: 80%;
+    width: calc(250 / 1440 * 100vw);
+    height: calc(50 / 1440 * 100vw);
+    border: 0;
+    align-items: center;
+    color: #ffffff;
+    background: #6b0404;
+    font-family: 'Andika';
+    font-style: normal;
+    font-weight: 700;
+    font-size: calc(20 / 1440 * 100vw);
+    line-height: calc(16 / 1440 * 100vw);
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.Basket-products-container {
+    display: flex;
+    padding: 30px 60px;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .Basket-sum {
+        font-size: calc(20 / 768 * 100vw);
+        margin-left: 70%;
+    }
+    .Basket-clear {
+        margin-left: 70%;
+        width: calc(200 / 768 * 100vw);
+        height: calc(40 / 768 * 100vw);
+        font-size: calc(18 / 768 * 100vw);
+        line-height: calc(16 / 768 * 100vw);
+    }
+    
+}

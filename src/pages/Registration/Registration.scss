@@ -216,3 +216,103 @@ h5 {
     line-height: calc(16 / 1440 * 100vw);
     cursor: pointer;
 }
+
+@media screen and (max-width: 768px) {
+    .Registration {
+        width: calc(600 / 768 * 100vw);
+        height: calc(875 / 768 * 100vw);
+        top: 15%;
+        margin-left: 12%;
+    }
+
+    .Registration__header {
+        width: calc(115 / 768 * 100vw);
+        height: calc(50 / 768 * 100vw);
+        margin-left: 25%;
+        margin-top: 25%;
+    }
+
+    h5 {
+        font-size: calc(50 / 768 * 100vw);
+        line-height: calc(50 / 768 * 100vw);
+    }
+
+    .Registration__input-input {
+        width: calc(510 / 768 * 100vw);
+        height: calc(49 / 768 * 100vw);
+        background: #FFFFFF;
+        border: 2px solid #787878;
+        font-size: calc(28 / 768 * 100vw);
+        line-height: calc(36 / 768 * 100vw);
+    }
+
+    .Registration__input-info-email, .Registration__input-info-password {
+        font-size: calc(18 / 768 * 100vw);
+    }
+            
+    .Registration__input-info-confirm_password {
+        width: calc(250 / 768 * 100vw);
+        font-size: calc(18 / 768 * 100vw);
+    }
+
+    .Registration__input-radio {
+        margin-bottom: 4%;
+        margin-left: 8%;
+        margin-top: 10%;
+    }    
+
+    .Registration__input-radio-email {
+        width: calc(400 / 768 * 100vw);
+        height: calc(30 / 768 * 100vw);
+        font-size: calc(16 / 768 * 100vw);
+        line-height: calc(16 / 768 * 100vw);
+    }
+
+    .Registration__input-radio-yes {
+        line-height: calc(16 / 768 * 100vw);
+    }
+
+    .Registration__input-radio-yes label::before {
+        width: calc(20 / 768 * 100vw);
+        height: calc(20 / 768 * 100vw);
+        border: 2px solid #d87417;
+    }
+    
+    .Registration__input-radio-yes label::after {
+        width: calc(16 / 768 * 100vw);
+        height: calc(16 / 768 * 100vw);
+        top: 13%;
+        left: 0.8%;
+    }
+
+    .Registration__input-radio-no {
+        line-height: calc(16 / 768 * 100vw);
+    }
+
+    .Registration__input-radio-no label::before {
+        width: calc(20 / 768 * 100vw);
+        height: calc(20 / 768 * 100vw);
+        border: 2px solid #d87417;
+    }
+    
+    .Registration__input-radio-no label::after {
+        width: calc(16 / 768 * 100vw);
+        height: calc(16 / 768 * 100vw);
+        top: 7%;
+        left: 0.74%;
+    }
+
+    .Registration__input-radio-label {
+        padding-left: calc(30 / 768 * 100vw);
+        line-height: calc(18 / 768 * 100vw);
+        height: calc(16 / 768 * 100vw);
+        font-size: calc(16 / 768 * 100vw);
+    }
+
+    .Registration__button {
+        width: calc(200 / 768 * 100vw);
+        height: calc(52 / 768 * 100vw);
+        font-size: calc(24 / 768 * 100vw);
+        line-height: calc(16 / 768 * 100vw);
+    }
+}

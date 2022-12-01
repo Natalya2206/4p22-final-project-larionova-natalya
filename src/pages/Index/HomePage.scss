@@ -7,7 +7,7 @@
     margin: auto;
 }
   
-.filter {
+.Filter {
     width: calc(700 / 1440 * 100vw);
     height: calc(30 / 1440 * 100vw);
     margin-left: 50%;
@@ -28,7 +28,7 @@
 }
 
 @media screen and (max-width: 768px) {
-    .filter {
+    .Filter {
         width: calc(450 / 768 * 100vw);
         height: calc(30 / 768 * 100vw);
         margin-left: 28%;

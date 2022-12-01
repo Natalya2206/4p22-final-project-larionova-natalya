@@ -23,10 +23,14 @@ export const basketSlice = createSlice({
             }
             delete state[payload];
 
+        },
+
+        clearBasket(state) {
+            return {};
         }
     }
 })
 
-export const { addtoBasket, removeFromBasket } = basketSlice.actions;
+export const { addtoBasket, removeFromBasket, clearBasket } = basketSlice.actions;
 
 export default basketSlice.reducer;

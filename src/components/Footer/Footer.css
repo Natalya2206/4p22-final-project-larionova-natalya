@@ -44,6 +44,7 @@ h3 {
     width: calc(400 / 1440 * 100vw);
     font-size: calc(16 / 1440 * 100vw);
     margin-left: -10%;
+    margin-top: 1.1%;
 }
 
 .Footer-subscription {
@@ -107,7 +108,7 @@ h4 {
         width: calc(320 / 768 * 100vw);
         font-size: calc(12 / 768 * 100vw);
         margin-left: 3%;
-        margin-top: -1%;
+        margin-top: 1%;
     }
 
     .Footer-subscription {
@@ -119,7 +120,7 @@ h4 {
         width: calc(150 / 768 * 100vw);;
         font-size: calc(12 / 768 * 100vw);
         line-height: calc(40 / 768 * 100vw);
-        margin-top: -3%;
+        margin-top: -5%;
         margin-left: 8%;
     }
     

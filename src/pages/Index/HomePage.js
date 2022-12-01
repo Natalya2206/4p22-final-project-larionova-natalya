@@ -4,57 +4,36 @@ import Card from '../../components/card/Card';
 import Research from '../../components/research/research';
 import Select from 'react-select';
 import { useDispatch, useSelector } from 'react-redux';
-import { setProducts } from '../../store/productsSlice';
+import { getProducts } from '../../store/productsSlice';
 
 
 function IndexPage() {
-    const products = useSelector((state) => state.products);
+    const products = useSelector((state) => state.products.entities);
     const dispatch = useDispatch();
     const [categories, setCategories] = useState([]);
     const [activeCategory, setactiveCategory] = useState({});
-    const [titles, setTitles] = useState('');
-  
-    const handleSearchInput = (name) => {
-      setTitles(name)
-      if (name.length >= 1) {
-          setProducts(products.filter(product => {
-          return product.title.toLowerCase().indexOf(name) >= 0
-        }))
-      } else {
-        getAllProducts()
-      }
-    }
-
-    function getAllProducts(){
-      fetch('https://6378cea27eb4705cf274e216.mockapi.io/games')
-       .then((responce) => responce.json())
-       .then((result) =>{
-        dispatch(setProducts(result));
-        let uniqCategory = new Set();
-        let сategories = []
-        result.forEach(product => {
-          let currentCategory = product.category;
-          if(!uniqCategory.has(currentCategory)) {
-            uniqCategory.add(currentCategory);
-            сategories.push({
-              value: currentCategory, 
-              label: currentCategory
-            })
-          }
-        });
-        setCategories(сategories)
-       });
-    }
-  
+    
     useEffect(() => {
-      getAllProducts()
-    }, []);
-       
+      dispatch(getProducts());
+      let uniqCategory = new Set();
+      let сategories = []
+      products.forEach(product => {
+        let currentCategory = product.category;
+        if(!uniqCategory.has(currentCategory)) {
+          uniqCategory.add(currentCategory);
+          сategories.push({
+            value: currentCategory, 
+            label: currentCategory
+          })
+        }
+      });
+      setCategories(сategories)
+  }, []);    
+     
     return (
       <div className="Index">
-        <div className='filter'>
-         <Research 
-         searchField={handleSearchInput}/>
+        <div className='Filter'>
+         <Research />
          <Select
            isClearable
            isSearchable

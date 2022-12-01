@@ -16,12 +16,10 @@ function Entry ()  {
                      <label className="form-input__info-password" htmlFor="password">Пароль</label>
                      <input className="input" id="password" name="password" type="password" placeholder="Введите пароль"/>
                  </div>
-                 <div className='form-checkbox'>     
-                     <label className="checkbox-other">
-                         <input type="checkbox"/>
-                         <span className='checkbox-span'>Запомнить вход</span>
-                     </label>
-                 </div>      
+                 <div class="form__input-checkbox">
+                     <input id="checkbox" type="checkbox"/>
+                     <label class="form-input-checkbox__label" htmlFor="checkbox">Запомнить меня</label> 
+                 </div>
                  <button className="form__button">Войти</button>
                  </div>
              </form>

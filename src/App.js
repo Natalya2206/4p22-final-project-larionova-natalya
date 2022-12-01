@@ -12,10 +12,10 @@ function App() {
       <Routes>
         <Route path={'/'} element={<DefaultLayout/>}>
         <Route index element={<IndexPage/>} />
-        <Route path={'/entry'} element={<Entry/>} />
-        <Route path={'/registration'} element={<Registration/>} />
-        <Route path={'/basket'} element={<Basket/>} />
-        <Route path={'/products'} element={<ProductPage/>}>
+        <Route path={'entry'} element={<Entry/>} />
+        <Route path={'registration'} element={<Registration/>} />
+        <Route path={'basket'} element={<Basket/>} />
+        <Route path={'products'} element={<ProductPage/>}>
         <Route path={':userId'} element={<ProductPage/>}/>
         </Route>
         </Route>
