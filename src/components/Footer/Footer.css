@@ -84,6 +84,7 @@ h4 {
     .Footer-container {
         width: calc(450 / 768 * 100vw);
         height: calc(90 / 768 * 100vw);
+        margin-left: 1%;
     }
 
     .Footer-logo img{
@@ -114,6 +115,7 @@ h4 {
     .Footer-subscription {
         width: calc(170 / 768 * 100vw);
         height: calc(90 / 768 * 100vw);
+        margin-right: 1%;
     }
 
     h4 {
