@@ -1,7 +1,6 @@
 import './HomePage.scss';
 import { useEffect, useState} from 'react';
 import Card from '../../components/card/Card';
-import Research from '../../components/research/research';
 import Select from 'react-select';
 import { useDispatch, useSelector } from 'react-redux';
 import { getProducts } from '../../store/productsSlice';
@@ -12,6 +11,7 @@ function IndexPage() {
     const dispatch = useDispatch();
     const [categories, setCategories] = useState([]);
     const [activeCategory, setactiveCategory] = useState({});
+    const [inputValue, setInputValue] = useState("");
     
     useEffect(() => {
       dispatch(getProducts());
@@ -33,7 +33,10 @@ function IndexPage() {
     return (
       <div className="Index">
         <div className='Filter'>
-         <Research />
+        <input className='Research-input' 
+               type='text' 
+               placeholder='Поиск'
+               onInput={(e) => setInputValue(e.target.value)}/>
          <Select
            isClearable
            isSearchable
@@ -47,13 +50,16 @@ function IndexPage() {
         </div> 
         <div className='Index-container'>
           {
-            products.filter((products) => {
+            products
+              .filter((products) => {
               if (activeCategory===null || activeCategory.label === undefined) {
                 return true
               } else {
                 return products.category === activeCategory.label
               }
-          }).map((item, index) => {
+          })
+            .filter((game) => game.title.toLowerCase().includes(inputValue.toLowerCase()))
+            .map((item, index) => {
             return <Card
                     key={index}
                     id={item.id}
