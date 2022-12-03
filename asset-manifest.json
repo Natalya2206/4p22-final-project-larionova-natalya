@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/4p22-final-project-larionova-natalya/static/css/main.a8df66fb.css",
-    "main.js": "/4p22-final-project-larionova-natalya/static/js/main.3aaa9a4b.js",
+    "main.js": "/4p22-final-project-larionova-natalya/static/js/main.d527fe1a.js",
     "index.html": "/4p22-final-project-larionova-natalya/index.html",
     "main.a8df66fb.css.map": "/4p22-final-project-larionova-natalya/static/css/main.a8df66fb.css.map",
-    "main.3aaa9a4b.js.map": "/4p22-final-project-larionova-natalya/static/js/main.3aaa9a4b.js.map"
+    "main.d527fe1a.js.map": "/4p22-final-project-larionova-natalya/static/js/main.d527fe1a.js.map"
   },
   "entrypoints": [
     "static/css/main.a8df66fb.css",
-    "static/js/main.3aaa9a4b.js"
+    "static/js/main.d527fe1a.js"
   ]
 }
