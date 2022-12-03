@@ -1,7 +1,7 @@
-import './Form.scss'
+import './FeedbackPage.scss'
 import { useState, useEffect } from 'react';
 
-function Form ()  {
+function FeedbackPage ()  {
     const [email, setEmail] = useState("");
     const [name, setName] = useState("");
     const [phone, setPhone] = useState("");
@@ -22,8 +22,9 @@ function Form ()  {
     }, [emailError, nameError, phoneError])
 
     const emailHandler = (e) => {
-        const regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        if(!regex(e.target.value)) {
+        setEmail(e.target.value)
+        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if(!re.test(String(e.target.value).toLowerCase())) {
             setEmailError("Неккоректный email")
         } else {
             setEmailError("")
@@ -31,10 +32,11 @@ function Form ()  {
     }
 
     const nameHandler = (e) => {
-        if(e.target.value.length < 1 || e.target.value.length > 15) {
+        setName(e.target.value)
+        if(e.target.value.length < 2 || e.target.value.length > 15) {
             setNameError("Неккоректное имя")
             if(!e.target.value) {
-                setNameError("Неккоректное имя")
+                setNameError("Поле не заполнено")
             }
         } else {
             setNameError("")
@@ -42,8 +44,9 @@ function Form ()  {
     }
 
     const phoneHandler = (e) => {
-        const regexPhone = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
-        if(!regexPhone(e.target.value)) {
+        setPhone(e.target.value)
+        const re = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
+        if(!re.test(String(e.target.value).toLowerCase())) {
             setPhoneError("Неккоректный номер")
         } else {
             setPhoneError("")
@@ -64,6 +67,10 @@ function Form ()  {
             default:
                 break;            
         }
+    }
+
+    const printToConsole = (email, name, phone) => {
+        console.log(email)
     }
 
     return (
@@ -95,7 +102,8 @@ function Form ()  {
                      <input id="checkbox" type="checkbox"/>
                      <label className="form-input-checkbox__label" htmlFor="checkbox">Подписаться на новости</label> 
                  </div>
-                 <button disabled={!formValid} type='submit' className="form__button">Войти</button>
+                 <button disabled={!formValid} type='submit' className="form__button"
+                         onClick={() => printToConsole(email, name, phone)} >Войти</button>
                  </div>
              </form>
          </div>
@@ -103,4 +111,4 @@ function Form ()  {
     )
 }
 
-export default Form;
+export default FeedbackPage;
