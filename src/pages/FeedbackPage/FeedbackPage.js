@@ -12,6 +12,8 @@ function FeedbackPage ()  {
     const [nameError, setNameError] = useState("Поле не заполнено");
     const [phoneError, setPhoneError] = useState("Поле не заполнено");
     const [formValid, setFormValid] = useState(false);
+    const [gender, setGender] = useState("");
+    const [isSubscribe, setSubscribe] = useState(false);
 
     useEffect (() => {
         if (emailError || nameError || phoneError) {
@@ -53,6 +55,14 @@ function FeedbackPage ()  {
         }
     }
 
+    const genderHandler = (e) => {
+        setGender(e.target.value)
+    }
+
+    const subscribeHandler = () => {
+        setSubscribe(!isSubscribe)
+    }
+
     const blurHandler = (e) => {
         switch (e.target.name) {
             case 'email':
@@ -63,14 +73,10 @@ function FeedbackPage ()  {
                  break;
             case 'phone':
                 setPhoneDirty(true)
-                break;
+                break;  
             default:
                 break;            
         }
-    }
-
-    const printToConsole = (email, name, phone) => {
-        console.log(email)
     }
 
     return (
@@ -98,12 +104,26 @@ function FeedbackPage ()  {
                          <input className="input" id="phone" name="phone" type="text" placeholder="Введите номер телефона"
                                  value={phone} onChange={e => phoneHandler(e)} onBlur={e => blurHandler(e)}/>
                  </div>
+                 <div className="form__input-radio"> 
+                     <div className="form__input-radio-gender">Пол</div>
+                     <div className="form__input-radio-man">
+                         <input id="radio_man" type="radio" name="gender" value="man"
+                         onChange={e => genderHandler(e)}/>
+                         <label className="form__input-radio-label" htmlFor="radio_man">Мужчина</label>
+                     </div>
+                     <div className="form__input-radio-woman">
+                         <input id="radio_woman" type="radio" name="gender" value="woman"
+                         onChange={e => genderHandler(e)}/>
+                         <label className="form__input-radio-label" htmlFor="radio_woman">Женщина</label>
+                     </div>
+                 </div>
                  <div className="form__input-checkbox">
-                     <input id="checkbox" type="checkbox"/>
+                     <input id="checkbox" type="checkbox" name="isSubscribe" checked={isSubscribe} 
+                     value={isSubscribe}
+                     onChange={() => subscribeHandler()} />
                      <label className="form-input-checkbox__label" htmlFor="checkbox">Подписаться на новости</label> 
                  </div>
-                 <button disabled={!formValid} type='submit' className="form__button"
-                         onClick={() => printToConsole(email, name, phone)} >Войти</button>
+                 <button disabled={!formValid} type='submit' className="form__button">Отправить</button>
                  </div>
              </form>
          </div>
