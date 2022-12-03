@@ -2,7 +2,7 @@ import './App.scss';
 import { Route, Routes } from 'react-router-dom';
 import HomePage from './pages/Index/HomePage';
 import DefaultLayout from './components/layouts/DefaultLayouts';
-import Entry from './pages/Entry/Entry';
+import Form from './pages/Form/Form';
 import Registration from './pages/Registration/Registration';
 import ProductPage from './pages/Products/Products';
 import Basket from './pages/basket/basket';
@@ -12,7 +12,7 @@ function App() {
       <Routes>
         <Route path={'/'} element={<DefaultLayout/>}>
         <Route index element={<HomePage/>} />
-        <Route path={'entry'} element={<Entry/>} />
+        <Route path={'form'} element={<Form/>} />
         <Route path={'registration'} element={<Registration/>} />
         <Route path={'basket'} element={<Basket/>} />
         <Route path={'products'} element={<ProductPage/>}>

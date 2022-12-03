@@ -13,7 +13,7 @@ function Header () {
              <div className="header__links">
                  <Link to={'/'} className="header__links-catalog">Каталог</Link>
                  <Link to={'basket'} className="header__links-basket">Корзина</Link>
-                 <Link to={'entry'} className="header__links-entry">Обратная связь</Link>
+                 <Link to={'form'} className="header__links-entry">Обратная связь</Link>
              </div>
         </div>
     )
