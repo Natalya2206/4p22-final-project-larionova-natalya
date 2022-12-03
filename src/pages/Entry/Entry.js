@@ -67,7 +67,7 @@ function Entry ()  {
                      </div>
                  <div className="form-input__info">
                      <label className="form-input__info-password" htmlFor="password">Пароль</label>
-                     <div className='erorr-email'>
+                     <div className='erorr-password'>
                      {passwordErorr.isErorr && <div>{passwordErorr.erorrMessage}</div>}
                      </div>
                      <input className="input" id="password" name="password" type="password" placeholder="Введите пароль"
