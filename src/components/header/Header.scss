@@ -32,6 +32,7 @@ h1 {
 }
 
 .header__links {
+    width: calc(350 / 1440 * 100vw);
     display: inline-flex;
     align-self: center;
     margin-left: 50%;
@@ -77,5 +78,6 @@ a {
         font-size: calc(16 / 768 * 100vw);
         line-height: calc(23 / 768 * 100vw);
         margin-left: 30%;
+        width: calc(350 / 768 * 100vw);
     }
 }
