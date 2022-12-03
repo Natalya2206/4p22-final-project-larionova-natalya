@@ -52,7 +52,7 @@ function IndexPage() {
           {
             products
               .filter((products) => {
-              if (activeCategory===null || activeCategory.label === undefined) {
+              if (activeCategory=== null || activeCategory.label === undefined) {
                 return true
               } else {
                 return products.category === activeCategory.label

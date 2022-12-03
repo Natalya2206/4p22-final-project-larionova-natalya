@@ -18,6 +18,14 @@ function Basket () {
                    return acc;
             }, 0) }
             </div>
+            <div className='Basket-amount'>
+                <p>Количество товаров:</p>
+                { Object.values(basket).reduce((acc, item) => {
+                  acc += item;
+
+                  return acc;
+                }, 0) }
+            </div>
             <button className='Basket-clear' onClick={() => dispatch(clearBasket())}>Очистить корзину</button> 
             <div className='Basket-products-container'>
             { products.filter((product) => basket[product.id])
